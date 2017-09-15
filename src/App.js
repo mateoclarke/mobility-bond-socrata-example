@@ -47,25 +47,39 @@ class App extends Component {
         <div className="App-header">
           <h2>Construction Projects funded by 2016 Mobility Bond</h2>
         </div>
-        <label htmlFor="district">Council District</label>
-        <select name="district" id="" value={this.state.district}
-          onChange={(e) => this.handleDistrictChange(e)}
-        >
-          <option value="">Select a District</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-        <p className="App-intro">
-          {JSON.stringify(this.state.dataSubset)}
-        </p>
+
+        <h2>
+          <label htmlFor="district" style={{ marginRight: "10px" }}>
+            Council District
+          </label>
+          <select name="district" id="" value={this.state.district}
+            onChange={(e) => this.handleDistrictChange(e)}
+          >
+            <option value="">Select a District</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </h2>
+
+        <div className="App-intro">
+          {this.state.dataSubset && this.state.dataSubset.map((item) => {
+            return (
+              <div key={item.project_id}>
+                <h4>{item.project_name}</h4>
+                <img src={item.project_image} alt="project" style={{ maxWidth: '200px' }}/>
+                <p>{Number(item.budget).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
+              </div>
+            )
+          })}
+        </div>
       </div>
     );
   }
