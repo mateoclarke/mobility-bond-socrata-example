@@ -1,3 +1,15 @@
+# 2016 Mobility Bond Data
+## An example using React and Socrata SODA API
+
+### To get started:
+
+- Clone the repo: `git clone https://github.com/mateoclarke/mobility-bond-socrata-example.git`
+- Move into the directory: `cd mobility-bond-socrata-example`
+- Install dependencies: `yarn`
+- Run a local server: `yarn start`
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
