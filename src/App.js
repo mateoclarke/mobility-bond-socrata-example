@@ -48,6 +48,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Construction Projects funded by 2016 Mobility Bond</h2>
+          <p>Ordered from Most to Least Expensive</p>
         </div>
 
         <h2>
