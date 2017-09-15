@@ -9,6 +9,7 @@ class App extends Component {
     this.state = {
       data: '',
       district: '',
+      dataSubset: '',
     };
   }
 
@@ -30,8 +31,13 @@ class App extends Component {
   }
 
   handleDistrictChange(e) {
+    const newSubset = this.state.data.filter((item) => {
+      return item.district_id && item.district_id.includes(e.target.value)
+    });
+
     this.setState({
       district: e.target.value,
+      dataSubset: newSubset,
     })
   }
 
@@ -58,7 +64,7 @@ class App extends Component {
           <option value="10">10</option>
         </select>
         <p className="App-intro">
-          {JSON.stringify(this.state.data)}
+          {JSON.stringify(this.state.dataSubset)}
         </p>
       </div>
     );
