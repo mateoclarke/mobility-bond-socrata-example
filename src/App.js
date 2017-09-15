@@ -31,9 +31,11 @@ class App extends Component {
   }
 
   handleDistrictChange(e) {
-    const newSubset = this.state.data.filter((item) => {
-      return item.district_id && item.district_id.includes(e.target.value)
-    });
+    const newSubset = this.state.data
+      .filter((item) => {
+        return item.district_id && item.district_id.includes(e.target.value)
+      })
+      .sort((a, b) => Number(b.budget) - Number(a.budget));
 
     this.setState({
       district: e.target.value,
