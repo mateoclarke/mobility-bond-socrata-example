@@ -3,10 +3,10 @@
 
 ### To get started:
 
-Clone the repo: `git clone https://github.com/mateoclarke/mobility-bond-socrata-example.git`
-Move into the directory: `cd mobility-bond-socrata-example`
-Install dependencies: `yarn`
-Run a local server: `yarn start`
+- Clone the repo: `git clone https://github.com/mateoclarke/mobility-bond-socrata-example.git`
+- Move into the directory: `cd mobility-bond-socrata-example`
+- Install dependencies: `yarn`
+- Run a local server: `yarn start`
 
 ---
 
